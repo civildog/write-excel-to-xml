@@ -1,12 +1,14 @@
 import os
 import win32com.client
-import excel_template as keys
-from excel_pages_change import dir_copy
+from . import excel_template as keys
+from .excel_pages_change import dir_copy
 import sys
 import time
 
 sys.setrecursionlimit(5000)
 
+def foo():
+    __all__ = []
 
 def amend_sgfile_name(path):
     """修改施工文件表名,并返回文件名"""

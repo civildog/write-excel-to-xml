@@ -3,7 +3,7 @@ from xml.dom import minidom
 from xml.dom.minidom import parse
 import win32com.client
 import os
-from sg_to_jl import find_adr, adr_to_pos
+from .sg_to_jl import find_adr, adr_to_pos
 import time
 
 '''
@@ -460,7 +460,7 @@ def add_item(dom, par_node, unit, addtions):
 
 
 def excel_write_xml(work, path):
-    """根据excel中的keys值生成xml文件,并保存在改路径下"""
+    """根据excel中的keys值生成xml文件,并保存在该路径下"""
     keys = []
     quote_keys = read_excel_keys(work, path, "引用")
     keys.append(quote_keys)
